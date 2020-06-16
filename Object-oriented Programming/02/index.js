@@ -9,9 +9,6 @@
 //   },
 // };
 
-
-
-
 // var prop = 'name'
 
 // // userOne.email = 'ryu2k18@ninjas.com';
@@ -29,8 +26,7 @@
 // userOne.login();
 // userOne.logout();
 
-
-// ---------------classes-----------------------------/ 
+// ---------------classes-----------------------------/
 // class User {
 //     constructor(email, name){
 //         this.email = email;
@@ -50,33 +46,74 @@
 // userOne.login();
 // userTwo.logout();
 
+// ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
+// class User {
+//     constructor(email, name){
+//         this.email = email;
+//         this.name = name;
+//         this.score = 0;
+//     }
+//     login(){
+//         console.log(this.email, 'just logged in');
+//         return this;
+//     }
+//     logout(){
+//         console.log(this.email, 'just logged out');
+//         return this;
+//     }
+//     updateScore(){
+//         this.score++;
+//         console.log(this.email, 'score is now', this.score);
+//         return this;
+//     }
+// }
+
+// var userOne = new User('ryu@ninjas.com', 'Ryu');
+// var userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
+
+// userOne.login().updateScore().updateScore().logout();
+
+// console.log(userOne);
+
+// --------------------Class Inheritance---------------------
 
 class User {
-    constructor(email, name){
-        this.email = email;
-        this.name = name;
-        this.score = 0;
-    }
-    login(){
-        console.log(this.email, 'just logged in');
-        return this;
-    }
-    logout(){
-        console.log(this.email, 'just logged out');
-        return this;
-    }
-    updateScore(){
-        this.score++;
-        console.log(this.email, 'score is now', this.score);
-        return this;
-    }
+  constructor(email, name) {
+    this.email = email;
+    this.name = name;
+    this.score = 0;
+  }
+  login() {
+    console.log(this.email, 'just logged in');
+    return this;
+  }
+  logout() {
+    console.log(this.email, 'just logged out');
+    return this;
+  }
+  updateScore() {
+    this.score++;
+    console.log(this.email, 'score is now', this.score);
+    return this;
+  }
+}
+
+class Admin extends User {
+  deleteUser(user) {
+    users = users.filter((u) => {
+      return u.email != user.email;
+    });
+  }
 }
 
 var userOne = new User('ryu@ninjas.com', 'Ryu');
 var userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
+var admin = new Admin('shaun@ninjas.com', 'Shaun');
 
-userOne.login().updateScore().updateScore().logout();
+var users = [userOne, userTwo, admin];
 
-console.log(userOne);
+// admin.deleteUser(userTwo);
+userTwo.deleteUser(userOne); // won't work
+
+console.log(users);
