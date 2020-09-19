@@ -49,15 +49,16 @@
       display: flex;
       a {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
         text-decoration: none;
         color: #fff;
+        background: #c2cbcc;
         display: inline-block;
-        background: grey;
-        font-size: 1.2rem;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 10px;
+        border-radius: 50%;
       }
     }
   }
