@@ -16,7 +16,9 @@
         margin-bottom: 50px;
       }
     }
-
+    .menu {
+      margin-bottom: 50px;
+    }
     .menu-title {
       color: #0971ce;
       text-transform: uppercase;
@@ -51,14 +53,33 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0.9rem;
         text-decoration: none;
+        background-color: #c2cbcc;
         color: #fff;
-        background: #c2cbcc;
-        display: inline-block;
-        width: 40px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
         border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+    .location {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 50px;
+      .address {
+        color: #7a8d99;
+        margin-bottom: 20px;
+        line-height: 1.2rem;
+      }
+
+      .phone-number {
+        a {
+          text-decoration: none;
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: #0971ce;
+        }
       }
     }
   }
