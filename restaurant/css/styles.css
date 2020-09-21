@@ -193,7 +193,7 @@ table {
 }
 
 #welcome .welcome-menu .links li a:hover {
-  color: red;
+  color: #fe0000;
 }
 
 #welcome .welcome-menu .social-icons {
@@ -230,7 +230,7 @@ table {
 
 #welcome .welcome-menu .location .address {
   color: #7a8d99;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.2rem;
 }
 
@@ -242,7 +242,47 @@ table {
 }
 
 #welcome .welcome-jumbo {
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fe0000;
+  background: radial-gradient(circle, #fe0000 0%, #ba0000 100%);
+  overflow: hidden;
+  padding: 50px;
+}
+
+#welcome .welcome-jumbo .status {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+#welcome .welcome-jumbo .burger-fries {
+  max-width: 90%;
+  height: auto;
+  position: relative;
+}
+
+#welcome .welcome-jumbo h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #fff;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body {

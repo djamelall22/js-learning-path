@@ -41,7 +41,7 @@
           transition: color 0.3s ease-in-out;
 
           &:hover {
-            color: red;
+            color: rgb(254, 0, 0);
           }
         }
       }
@@ -67,9 +67,10 @@
       position: absolute;
       bottom: 0;
       margin-bottom: 50px;
+
       .address {
         color: #7a8d99;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         line-height: 1.2rem;
       }
 
@@ -85,6 +86,52 @@
   }
 
   .welcome-jumbo {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(254, 0, 0);
+    background: radial-gradient(
+      circle,
+      rgba(254, 0, 0, 1) 0%,
+      rgba(186, 0, 0, 1) 100%
+    );
+    overflow: hidden;
+    padding: 50px;
+
+    .status {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 10px;
+      font-weight: 700;
+      color: #fff;
+      background: #000;
+      border-radius: 5px;
+      align-self: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .burger-fries {
+      max-width: 90%;
+      height: auto;
+      // animation: moveUpDown 3s ease-in-out;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      font-weight: 900;
+      color: #fff;
+      align-self: flex-start;
+    }
+
+    // @keyframes moveUpDown {
+    //   0%,
+    //   100% {
+    //     opacity: 0;
+    //   }
+    //   50% {
+    //     opacity: 100px;
+    //   }
+    // }
   }
 }
