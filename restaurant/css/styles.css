@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#welcome {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 1fr;
+      grid-template-columns: 350px 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome .welcome-menu {
+  background-color: #fff;
+  padding: 50px;
+}
+
+#welcome .welcome-menu .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#welcome .welcome-menu .logo img {
+  max-width: 100px;
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu {
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu-title {
+  color: #0971ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e2eaef;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-menu .links li a {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  display: block;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#welcome .welcome-menu .links li a:hover {
+  color: #fe0000;
+}
+
+#welcome .welcome-menu .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#welcome .welcome-menu .social-icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background-color: #c2cbcc;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#welcome .welcome-menu .location {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .location .address {
+  color: #7a8d99;
+  margin-bottom: 15px;
+  line-height: 1.2rem;
+}
+
+#welcome .welcome-menu .location .phone-number a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0971ce;
+}
+
+#welcome .welcome-jumbo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fe0000;
+  background: radial-gradient(circle, #fe0000 0%, #ba0000 100%);
+  overflow: hidden;
+  padding: 50px;
+}
+
+#welcome .welcome-jumbo .status {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+#welcome .welcome-jumbo .burger-fries {
+  max-width: 90%;
+  height: auto;
+  position: relative;
+}
+
+#welcome .welcome-jumbo h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #fff;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */
