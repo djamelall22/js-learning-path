@@ -2,5 +2,8 @@ const shareIcon = document.querySelector('#share');
 const socialContainer = document.querySelector('#social');
 
 shareIcon.addEventListener('click', () => {
-  socialContainer.classList.toggle('show');
+  if ((socialContainer.style.visibility = 'hidden')) {
+    socialContainer.classList.toggle('show');
+  } else {
+  }
 });

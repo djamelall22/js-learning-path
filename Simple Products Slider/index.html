@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Simple Products Slider</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"> Products </a>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </header>
+
+    <section class="banner">
+      <div class="banner__inner">
+        <img class="active" src="./images/img1.jpg" alt="Sole Shoes" />
+        <img src="./images/img2.jpg" alt="Shoes" />
+        <img src="./images/img3.jpg" alt="camera" />
+        <img src="./images/img4.jpg" alt="lamp" />
+      </div>
+      <ul class="banner__controls">
+        <li onclick="prevSlide()"></li>
+        <li onclick="nextSlide()"></li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      const bannerInner = document.querySelector('.banner__inner');
+      const sildes = document.getElementsByTagName('img');
+      let i = 0;
+
+      function nextSlide() {
+        sildes[i].classList.remove('active');
+        i = (i + 1) % sildes.length;
+        sildes[i].classList.add('active');
+      }
+
+      function prevSlide() {
+        sildes[i].classList.remove('active');
+        i = (i - 1 + sildes.length) % sildes.length;
+        sildes[i].classList.add('active');
+      }
+    </script>
+  </body>
+</html>
