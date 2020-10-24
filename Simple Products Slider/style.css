@@ -48,8 +48,10 @@ header ul li a {
   color: #fff;
   text-decoration: none;
 }
+
 /* end of header */
 
+/* banner */
 .banner {
   position: relative;
   width: 100%;
@@ -117,3 +119,47 @@ header ul li a {
 .banner__controls li:last-child::before {
   transform: rotate(225deg);
 }
+
+.banner__content {
+  position: absolute;
+  bottom: 0;
+  max-width: 700px;
+}
+
+.banner__content div {
+  display: none;
+}
+
+.banner__content div.active {
+  display: block;
+  padding: 30px;
+  padding-left: 100px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.banner__content div h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.banner__content div p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.banner__content div a {
+  color: #111;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.banner__content div a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 3px;
+}
+/* end of banner */

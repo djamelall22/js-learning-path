@@ -29,15 +29,54 @@
         <img src="./images/img3.jpg" alt="camera" />
         <img src="./images/img4.jpg" alt="lamp" />
       </div>
+
+      <div class="banner__content">
+        <div class="active">
+          <h2>Slide Text One</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            sequi fuga eaque ex accusamus officiis minima voluptas officia.
+          </p>
+          <a href="#">Details</a>
+        </div>
+
+        <div>
+          <h2>Slide Text Two</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            sequi fuga eaque ex accusamus officiis minima voluptas officia.
+          </p>
+          <a href="#">Details</a>
+        </div>
+
+        <div>
+          <h2>Slide Text Three</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            sequi fuga eaque ex accusamus officiis minima voluptas officia.
+          </p>
+          <a href="#">Details</a>
+        </div>
+
+        <div>
+          <h2>Slide Text Four</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            sequi fuga eaque ex accusamus officiis minima voluptas officia.
+          </p>
+          <a href="#">Details</a>
+        </div>
+      </div>
+
       <ul class="banner__controls">
-        <li onclick="prevSlide()"></li>
-        <li onclick="nextSlide()"></li>
+        <li onclick="prevSlide(); prevSlideText()"></li>
+        <li onclick="nextSlide(); nextSlideText()"></li>
       </ul>
     </section>
 
     <script type="text/javascript">
       const bannerInner = document.querySelector('.banner__inner');
-      const sildes = document.getElementsByTagName('img');
+      const sildes = bannerInner.getElementsByTagName('img');
       let i = 0;
 
       function nextSlide() {
@@ -50,6 +89,24 @@
         sildes[i].classList.remove('active');
         i = (i - 1 + sildes.length) % sildes.length;
         sildes[i].classList.add('active');
+      }
+
+      // banner__content
+
+      const bannerContent = document.querySelector('.banner__content');
+      const textSildes = bannerContent.getElementsByTagName('div');
+      let j = 0;
+
+      function nextSlideText() {
+        textSildes[j].classList.remove('active');
+        j = (j + 1) % textSildes.length;
+        textSildes[j].classList.add('active');
+      }
+
+      function prevSlideText() {
+        textSildes[j].classList.remove('active');
+        j = (j - 1 + textSildes.length) % textSildes.length;
+        textSildes[j].classList.add('active');
       }
     </script>
   </body>
